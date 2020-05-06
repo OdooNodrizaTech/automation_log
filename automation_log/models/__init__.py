@@ -1,1 +1,1 @@
-import automation_log
+from . import automation_log

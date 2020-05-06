@@ -1,1 +1,1 @@
-import account_banking_mandate
+from . import account_banking_mandate

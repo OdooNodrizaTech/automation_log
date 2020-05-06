@@ -2,9 +2,7 @@
 import logging
 _logger = logging.getLogger(__name__)
 
-from openerp import api, models, fields
-from openerp.exceptions import Warning
-from datetime import datetime
+from odoo import api, models, fields
 
 class AccountBankingMandate(models.Model):
     _inherit = 'account.banking.mandate'            
