@@ -6,7 +6,7 @@
     'website': 'https://nodrizatech.com/',
     'category': 'Tools',
     'license': 'AGPL-3',
-    'depends': ['base', 'sms_sale', 'automation_log'],
+    'depends': ['base', 'aws_sms_sale', 'automation_log'],
     'data': [],
     'installable': True,
     'auto_install': False,    
