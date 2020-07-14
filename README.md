@@ -14,4 +14,3 @@ nombre | version
 [automation_log_shipping_expedition_send_mail_info](automation_log_shipping_expedition_send_mail_info/) | 12.0.1.0.0
 [automation_log_shipping_expedition_send_sms_info](automation_log_shipping_expedition_send_sms_info/) | 12.0.1.0.0
 [automation_log_sms_sale](automation_log_sms_sale/) | 12.0.1.0.0
-[automation_log_survey_arelux](automation_log_survey_arelux/) | 12.0.1.0.0
