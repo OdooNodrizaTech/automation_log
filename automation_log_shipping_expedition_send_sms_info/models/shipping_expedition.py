@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-import logging
-_logger = logging.getLogger(__name__)
 
-from odoo import api, fields, models
+from odoo import api, models
+
 
 class ShippingExpedition(models.Model):
     _inherit = 'shipping.expedition'
@@ -11,13 +9,13 @@ class ShippingExpedition(models.Model):
     @api.one 
     def action_send_sms_info_real(self):                
         return_item = super(ShippingExpedition, self).action_send_sms_info_real()
-        #save_log
-        automation_log_vals = {                    
+        # save_log
+        vals = {
             'model': 'shipping.expedition',
             'res_id': self.id,
             'category': 'shipping_expedition',
             'action': 'send_sms_info',                                                                                                                                                                                           
         }
-        automation_log_obj = self.env['automation.log'].sudo().create(automation_log_vals)
-        #return
+        self.env['automation.log'].sudo().create(vals)
+        # return
         return return_item
