@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/OdooNodrizaTech/automation_log.svg?branch=12.0)](https://travis-ci.org/OdooNodrizaTech/automation_log)
+[![Coverage Status](https://coveralls.io/repos/OdooNodrizaTech/automation_log/badge.svg?branch=12.0)](https://coveralls.io/r/OdooNodrizaTech/automation_log?branch=12.0)
+
 automation_log
 =========
 Módulos relacionados con Automation Log
