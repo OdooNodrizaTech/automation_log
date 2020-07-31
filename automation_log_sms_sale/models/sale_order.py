@@ -6,9 +6,16 @@ from odoo import api, models
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    @api.one
-    def action_send_sms_automatic(self, sms_template_id=False, need_check_date_order_send_sms=True):                
-        return_item = super(SaleOrder, self).action_send_sms_automatic(sms_template_id, need_check_date_order_send_sms)        
+    @api.multi
+    def action_send_sms_automatic(self,
+                                  sms_template_id=False,
+                                  need_check_date_order_send_sms=True
+                                  ):
+        self.ensure_one()
+        res = super(SaleOrder, self).action_send_sms_automatic(
+            sms_template_id,
+            need_check_date_order_send_sms
+        )
         # save_log
         if self.date_order_send_sms:
             vals = {
@@ -19,4 +26,4 @@ class SaleOrder(models.Model):
             }
             self.env['automation.log'].sudo().create(vals)
         # return
-        return return_item
+        return res

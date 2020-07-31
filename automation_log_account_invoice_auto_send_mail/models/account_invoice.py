@@ -6,9 +6,13 @@ from odoo import api, models
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
-    @api.one 
-    def account_invoice_auto_send_mail_item_real(self, mail_template_id, author_id):                
-        return_item = super(AccountInvoice, self).account_invoice_auto_send_mail_item_real(mail_template_id, author_id)
+    @api.multi
+    def account_invoice_auto_send_mail_item_real(self, mail_template_id, author_id):
+        self.ensure_one()
+        res = super(AccountInvoice, self).account_invoice_auto_send_mail_item_real(
+            mail_template_id,
+            author_id
+        )
         # save_log
         vals = {
             'model': 'account.invoice',
@@ -18,4 +22,4 @@ class AccountInvoice(models.Model):
         }
         self.env['automation.log'].sudo().create(vals)
         # return
-        return return_item
+        return res

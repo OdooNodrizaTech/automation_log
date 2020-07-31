@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <record id="automation_form_view" model="ir.ui.view">
         <field name="name">Automation Log</field>
         <field name="model">automation.log</field>
@@ -17,6 +18,7 @@
             </form>
         </field>
     </record>
+
     <record id="automation_log_tree" model="ir.ui.view">
         <field name="name">Automation Log</field>
         <field name="model">automation.log</field>
@@ -29,6 +31,7 @@
             </tree>
         </field>
     </record>
+
     <record id="odoo_automation_log_action" model="ir.actions.act_window">
         <field name="name">Automation Log</field>
         <field name="type">ir.actions.act_window</field>
@@ -37,6 +40,7 @@
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="automation_log_tree"/>
     </record>
+
     <menuitem
         id="menu_odoo_automation"
         name="Automation"

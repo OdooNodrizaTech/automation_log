@@ -6,8 +6,9 @@ from odoo import api, models
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
-    @api.one 
-    def action_auto_create(self):                
+    @api.multi
+    def action_auto_create(self):
+        self.ensure_one()
         return_item = super(AccountInvoice, self).action_auto_create()
         # save_log
         vals = {
@@ -20,8 +21,9 @@ class AccountInvoice(models.Model):
         # return
         return return_item
         
-    @api.one 
-    def action_auto_open(self):                
+    @api.multi
+    def action_auto_open(self):
+        self.ensure_one()
         return_item = super(AccountInvoice, self).action_auto_open()
         # save_log
         vals = {
@@ -32,4 +34,4 @@ class AccountInvoice(models.Model):
         }
         self.env['automation.log'].sudo().create(vals)
         # return
-        return return_item        
+        return return_item
