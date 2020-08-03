@@ -10,6 +10,7 @@
     "license": "AGPL-3",
     "depends": [
         "base",
+        "crm",  # Fix travis
         "sale_orders_generate_invoice",  # https://github.com/OdooNodrizaTech/sale
         "automation_log"
     ],
