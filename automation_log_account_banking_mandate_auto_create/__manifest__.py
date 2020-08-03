@@ -12,7 +12,7 @@
         "base",
         "sale",
         "account",
-        "account_banking_mandate_auto_create",  # https://github.com/OdooNodrizaTech/account
+        "account_banking_mandate_auto_create",  # github.com/OdooNodrizaTech/account
         "automation_log"
     ],
     "data": [],

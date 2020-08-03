@@ -15,7 +15,7 @@ class ShippingExpedition(models.Model):
             'model': 'shipping.expedition',
             'res_id': self.id,
             'category': 'shipping_expedition',
-            'action': 'send_mail_info',                                                                                                                                                                                           
+            'action': 'send_mail_info'
         }
         self.env['automation.log'].sudo().create(vals)
         # return

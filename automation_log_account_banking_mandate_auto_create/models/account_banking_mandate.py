@@ -4,7 +4,7 @@ from odoo import api, models
 
 
 class AccountBankingMandate(models.Model):
-    _inherit = 'account.banking.mandate'            
+    _inherit = 'account.banking.mandate'
 
     @api.model
     def create(self, values):
@@ -16,7 +16,7 @@ class AccountBankingMandate(models.Model):
                 'model': 'account.banking.mandate',
                 'res_id': self.id,
                 'category': 'account_banking_mandate',
-                'action': 'create',                                                                                                                                                                                           
+                'action': 'create'
             }
             self.env['automation.log'].sudo().create(vals)
         # return
@@ -26,14 +26,14 @@ class AccountBankingMandate(models.Model):
     def validate(self):
         res = super(AccountBankingMandate, self).validate()
         # operations
-        if return_create:
+        if res:
             if self.auto_create:
                 # save_log
                 vals = {
                     'model': 'account.banking.mandate',
                     'res_id': self.id,
                     'category': 'account_banking_mandate',
-                    'action': 'validate',                                                                                                                                                                                           
+                    'action': 'validate'
                 }
                 self.env['automation.log'].sudo().create(vals)
         # return

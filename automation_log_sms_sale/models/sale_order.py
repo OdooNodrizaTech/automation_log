@@ -22,7 +22,7 @@ class SaleOrder(models.Model):
                 'model': 'sale.order',
                 'res_id': self.id,
                 'category': 'sale_order',
-                'action': 'send_sms',                                                                                                                                                                                           
+                'action': 'send_sms'
             }
             self.env['automation.log'].sudo().create(vals)
         # return

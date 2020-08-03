@@ -18,7 +18,7 @@ class AccountInvoice(models.Model):
             'model': 'account.invoice',
             'res_id': self.id,
             'category': 'account_invoice',
-            'action': 'send_mail',                                                                                                                                                                                           
+            'action': 'send_mail'
         }
         self.env['automation.log'].sudo().create(vals)
         # return

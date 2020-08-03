@@ -8,12 +8,12 @@
     "website": "https://nodrizatech.com/",
     "category": "Tools",
     "license": "AGPL-3",
-    "depends":[
+    "depends": [
         "base"
     ],
     "data": [
         "security/ir.model.access.csv",
         "views/automation_view.xml",
-    ],    
+    ],
     "installable": True
 }

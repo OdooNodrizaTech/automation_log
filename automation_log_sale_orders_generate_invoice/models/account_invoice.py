@@ -15,12 +15,12 @@ class AccountInvoice(models.Model):
             'model': 'account.invoice',
             'res_id': self.id,
             'category': 'account_invoice',
-            'action': 'create',                                                                                                                                                                                           
+            'action': 'create'
         }
         self.env['automation.log'].sudo().create(vals)
         # return
         return return_item
-        
+
     @api.multi
     def action_auto_open(self):
         self.ensure_one()
@@ -30,7 +30,7 @@ class AccountInvoice(models.Model):
             'model': 'account.invoice',
             'res_id': self.id,
             'category': 'account_invoice',
-            'action': 'valid',                                                                                                                                                                                           
+            'action': 'valid'
         }
         self.env['automation.log'].sudo().create(vals)
         # return

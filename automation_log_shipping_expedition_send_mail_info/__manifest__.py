@@ -10,7 +10,7 @@
     "license": "AGPL-3",
     "depends": [
         "base",
-        "shipping_expedition_send_mail_info",  # https://github.com/OdooNodrizaTech/stock
+        "shipping_expedition_send_mail_info",  # github.com/OdooNodrizaTech/stock
         "automation_log"
     ],
     "data": [],
