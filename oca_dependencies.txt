@@ -1,0 +1,4 @@
+OdooNodrizaTech-account https://github.com/OdooNodrizaTech/account
+OdooNodrizaTech-sale https://github.com/OdooNodrizaTech/sale
+OdooNodrizaTech-sms https://github.com/OdooNodrizaTech/sms
+OdooNodrizaTech-stock https://github.com/OdooNodrizaTech/stock
