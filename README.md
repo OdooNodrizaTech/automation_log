@@ -1,3 +1,4 @@
+[![Build Status](https://runbot.nodrizatech.com/runbot/badge/17/12.0.svg)](https://runbot.nodrizatech.com/runbot/repo/https-github-com-odoonodrizatech-automation-log-17)
 [![Build Status](https://travis-ci.org/OdooNodrizaTech/automation_log.svg?branch=12.0)](https://travis-ci.org/OdooNodrizaTech/automation_log)
 [![codecov](https://codecov.io/gh/OdooNodrizaTech/automation_log/branch/12.0/graph/badge.svg)](https://codecov.io/gh/OdooNodrizaTech/automation_log)
 
